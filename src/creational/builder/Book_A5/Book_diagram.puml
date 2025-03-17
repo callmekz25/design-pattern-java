@@ -1,0 +1,19 @@
+@startuml
+
+class Book{
+    String tuaDe
+    int soTrang
+    String tacGia
+    List<String> chuong
+    Book(Builder b)
+}
+
+class Builder{
+    Book build()
+    Builder buildBook(String tuaDe, int soTrang, String tacGia)
+
+}
+
+Builder ..> Book
+
+@enduml

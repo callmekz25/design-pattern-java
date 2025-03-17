@@ -1,0 +1,23 @@
+@startuml
+interface ThayDoiTiGia{
+    void nhanThongBao(float delta)
+}
+
+class DichVuTiGia{
+    void dangKy(ThayDoiTiGia ndt)
+    void huyDangKy(ThayDoiTiGia ndt)
+    void thongBao(float delta)
+}
+
+abstract class NhaDauTu{
+    void dangKy()
+    void huyDangKy()
+}
+
+ThayDoiTiGia <|.. NhaDauTu
+DichVuTiGia *--> ThayDoiTiGia: "nhaDauTu"
+NhaDauTu --> DichVuTiGia: "dvtg"
+
+NhaDauTu <|.. NhaDauTuA
+NhaDauTu <|.. NhaDauTuB
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+
+class DataAccess {
+   - {static} DataAccess instance
+   - DataAccess
+   + {static} DataAccess getInstance()
+   + void add(SanPham s)
+   + void update(SanPham s)
+   + void delete(SanPham s)
+   + void display()
+}
+class SanPham
+class Main
+DataAccess *--> SanPham: "dsSP"
+Main --> DataAccess
+@enduml

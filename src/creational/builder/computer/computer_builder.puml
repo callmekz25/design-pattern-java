@@ -1,0 +1,21 @@
+@startuml
+
+class Computer{
+    - String cpu, ram, storage, screen
+    - Computer(Builder b)
+}
+
+class Builder{
+    - String cpu, ram, storage, screen
+    + Builder buildCpu(String cpu)
+    + Builder buildRam(String ram)
+    + Builder buildStorage(String storage)
+    + Builder buildScreen(String screen)
+    + Computer build()
+}
+
+'Liên quan'
+Builder ..> Computer
+
+
+@enduml
