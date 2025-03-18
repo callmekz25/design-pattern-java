@@ -1,4 +1,4 @@
-package structure.decorator.composite;
+package structure.composite;
 
 public class LeafNode extends Node {
 

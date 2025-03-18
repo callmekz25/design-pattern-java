@@ -1,0 +1,18 @@
+@startuml
+class Layout{
+
+}
+class Component{
+}
+abstract class UI_Element {
+}
+
+UI_Element <|-- Layout
+UI_Element <|-- Component
+Layout --> UI_Element: children
+
+Column --|> Layout
+Stack --|> Layout
+Button --|> Component
+Texts --|> Component
+@enduml

@@ -1,0 +1,21 @@
+@startuml
+
+class MonHoc {
+    int soTC, hocPhi;
+}
+
+class ChuongTrinhHoc{}
+abstract class QLHocTap {
+    String name;
+    {abstract} getSoTC();
+    {abstract} getHP();
+    {abstract} String ThongTin();
+    {abstract} QLHocTap add(QLHocTap qlht);
+    {abstract} void remove(QLHocTap qlht));
+}
+
+QLHocTap <|-- MonHoc
+QLHocTap <|-- ChuongTrinhHoc
+ChuongTrinhHoc *--> QLHocTap
+
+@enduml

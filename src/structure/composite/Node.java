@@ -1,4 +1,4 @@
-package structure.decorator.composite;
+package structure.composite;
 
 public abstract class Node {
     Node left, right;
