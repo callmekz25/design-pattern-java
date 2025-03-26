@@ -1,0 +1,26 @@
+@startuml
+class ATM{
+    void rutTien(int soTien);
+    void nhanThe(TheoDoiATM tdatm)
+    void traThe()
+}
+
+interface TheoDoiATM{
+    void nhanThongBao(int soTienRut)
+    void kiemTraSoDu(int soTien, boolean thanhCong)
+}
+
+class TaiKhoan{
+    String tenTaiKhoan
+    int soDu
+    String soTaiKhoan
+    void duaTheVaoATM()
+    void rutThe()
+}
+'Observer chứa giao diện và thực thi giao diện'
+'Observer chứa subject'
+'Subject chứa giao diện'
+TheoDoiATM <|.. TaiKhoan
+TheoDoiATM <-- ATM : TheATM
+TaiKhoan --> ATM : atm
+@enduml
