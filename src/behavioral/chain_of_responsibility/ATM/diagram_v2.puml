@@ -1,0 +1,27 @@
+@startuml
+
+abstract class ChuoiMenhGiaFactory{
+    # {abstract} MenhGiaATM getChuoiMenhGia(MenhGiaATM mgLonNhat)
+    + {abstract} void rutTien(int soTien, MenhGiaATM mgLonNhat)
+
+}
+class ChuoiMenhGia{
+}
+abstract class MenhGiaATM{
+    # int giaTri
+    + {abstract} MenhGiaATM thietLapKeTiep(MenhGiaATM keTiep)
+    + {abstract} void rutTien(int soTien)
+
+}
+class MenhGiaThapNhat
+
+class MenhGia
+
+MenhGiaATM <|-- MenhGiaThapNhat
+MenhGiaATM <|-- MenhGia
+
+MenhGia --> MenhGiaATM : keTiep
+
+ChuoiMenhGia *--> MenhGiaATM : m500\nm200\n...m1
+ChuoiMenhGiaFactory <|-- ChuoiMenhGia
+@enduml

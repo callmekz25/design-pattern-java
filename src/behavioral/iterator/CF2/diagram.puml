@@ -1,0 +1,25 @@
+@startuml
+class ATM{
+    + void napTien(int soTien)
+    + void setState(ATM_State state)
+    + void rutTien()
+}
+
+interface ATM_State{
+    + void xyLyNapTien(int soTien)
+    + void rutTien(ATM context)
+}
+
+class SanSang
+
+class HetTien
+
+class HanChe
+
+ATM --> ATM_State : state
+ATM_State <|.. SanSang
+ATM_State <|.. HanChe
+ATM_State <|.. HetTien
+
+
+@enduml

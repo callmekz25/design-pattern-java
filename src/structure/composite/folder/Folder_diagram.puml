@@ -15,11 +15,9 @@ class Folder{
 
 
 class File
-{
 
-}
 
-File *--> Folder
+Folder *--> File
 
 Folder --|> FolderOrFile
 File --|> FolderOrFile

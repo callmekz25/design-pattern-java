@@ -16,7 +16,9 @@ public class Main {
         dataAccess1.add(s3);
 
         dataAccess1.display();
+        System.out.println("------");
         dataAccess2.display();
+        System.out.println("------");
         dataAccess3.display();
     }
 }

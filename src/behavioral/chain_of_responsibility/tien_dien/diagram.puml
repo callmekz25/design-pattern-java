@@ -1,0 +1,17 @@
+@startuml
+abstract class TienDienBacThang{
+    String tenBac
+    int min, max, gia
+    + {abstract} TienDienBacThang bacKeTiep(TienDienBacThang keTiep)
+    + int tinhTienDien(int soKW)
+}
+
+class BacCaoNhat
+
+class BacThongThuong
+
+BacCaoNhat --|> TienDienBacThang
+
+BacThongThuong --|> TienDienBacThang
+BacThongThuong --> TienDienBacThang : bacKeTiep
+@enduml
