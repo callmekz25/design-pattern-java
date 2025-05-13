@@ -1,0 +1,37 @@
+@startuml
+abstract class BieuThuc{
+    + float giaTri()
+    + String bieuThuc()
+}
+
+class BieuThucDonGian{
+    - float toanHang
+}
+
+class BieuThucDecorator
+
+class Cong {
+    - float toanHang
+}
+
+class Tru{
+    - float toanHang
+}
+
+class Nhan{
+    - int toanHang
+}
+
+class Chia{
+    - int toanHang
+}
+
+BieuThucDonGian --|> BieuThuc
+BieuThucDecorator --|> BieuThuc
+BieuThucDecorator --> BieuThuc : bieuThuc
+Cong --|> BieuThucDecorator
+Tru --|> BieuThucDecorator
+Nhan --|> BieuThucDecorator
+Chia --|> BieuThucDecorator
+
+@enduml

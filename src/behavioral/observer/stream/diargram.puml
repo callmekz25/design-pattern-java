@@ -1,0 +1,23 @@
+@startuml
+class DataAccess {
+    - List<MonHoc> listMH
+    + add(MonHoc m)
+    + delete(MonHoc m)
+}
+class MyStream<T>{
+    + void addEvent(T t)
+    + void addListener(MyStreamListener listener)
+}
+
+interface MyStreamListener<T>{
+    + void listen(T t)
+}
+
+class Client
+
+Client ..|> MyStreamListener
+Client --> MyStream : stream
+MyStream o--> MyStreamListener : listeners
+DataAccess --> MyStream : stream
+
+@enduml
