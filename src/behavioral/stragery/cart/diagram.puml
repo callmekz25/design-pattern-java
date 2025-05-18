@@ -1,0 +1,34 @@
+@startuml
+class GioHang{
+    List<MatHang> dsmt
+    + void thanhToan()
+}
+
+class MatHang{
+    String ten
+    float gia
+    int sl
+}
+
+interface IThanhToan{
+    float thanhToan(float soTien)
+}
+
+interface IKhuyenMai {
+    float khuyenMai(float soTien)
+}
+
+class COD
+
+class AirPay
+
+class KhuyenMai_10_Max100
+
+GioHang --> IThanhToan : httt
+GioHang *--> MatHang : dsmh
+GioHang --> IKhuyenMai : khuyenMai
+
+COD ..|> IThanhToan
+AirPay ..|> IThanhToan
+KhuyenMai_10_Max100 ..|> IKhuyenMai
+@enduml
