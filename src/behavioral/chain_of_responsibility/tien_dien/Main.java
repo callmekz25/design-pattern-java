@@ -11,6 +11,6 @@ public class Main {
 
         bac1.bacKeTiep(bac2).bacKeTiep(bac3).bacKeTiep(bac4).bacKeTiep(bac5).bacKeTiep(bac6);
 
-        System.out.println("Tính tiền điện của 125KW: " + bac1.tinhTienDien(125) + " VND");
+        System.out.println("Tính tiền điện của 125KW: " + bac1.tinhTienDien(55) + " VND");
     }
 }

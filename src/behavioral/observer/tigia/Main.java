@@ -7,9 +7,9 @@ public class Main {
         NhaDauTu ndtB = new NhaDauTuB("Kv", dvtg);
         ndtA.dangKy();
         ndtB.dangKy();
-        dvtg.thongBao(10 );
+        dvtg.nhanThongBao(10 );
 
         ndtA.huyDangKy();
-        dvtg.thongBao(20);
+        dvtg.nhanThongBao(20);
     }
 }

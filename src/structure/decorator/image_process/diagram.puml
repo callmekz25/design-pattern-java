@@ -1,0 +1,25 @@
+@startuml
+
+abstract class Image{
+    + void process()
+}
+
+class BasicProcess {
+    String path
+}
+class ImageDecorators
+
+class BorderDecorator
+
+class WatermarkDecorator
+
+class FilterDecorator
+
+BorderDecorator --|> ImageDecorators
+WatermarkDecorator --|> ImageDecorators
+FilterDecorator --|> ImageDecorators
+ImageDecorators --|> Image
+BasicProcess --|> Image
+ImageDecorators --> Image : image
+
+@enduml

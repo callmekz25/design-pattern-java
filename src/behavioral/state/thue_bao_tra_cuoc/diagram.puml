@@ -1,0 +1,30 @@
+@startuml
+
+class NormalStatus
+
+class SilverStatus
+
+class GoldStatus
+
+interface IState{
+    + void xuLyNapTien(int soTien, ThueBaoTraCuoc tb)
+    + void xuLyGoiDien(int soPhut, ThueBaoTraCuoc tb)
+    + void inThongTin(ThueBaoTraCuoc tb)
+
+}
+class ThueBaoTraCuoc{
+    int soDu
+    + void napTien(int soTien)
+    + void goiDien(int soPhut)
+    + void inThongTin()
+    + void setState(IState state)
+}
+
+
+
+ThueBaoTraCuoc --> IState : state
+
+NormalStatus ..|> IState
+SilverStatus ..|> IState
+GoldStatus ..|> IState
+@enduml

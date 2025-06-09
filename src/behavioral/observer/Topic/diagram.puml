@@ -1,0 +1,35 @@
+@startuml
+
+
+class News{
+    - int id
+    - String content
+}
+
+'Subject'
+class Topic{
+    - List<News> news
+    - int count
+    + void attach(TopicListener t)
+    + void detach(TopicListener t)
+    + addNew(String content)
+    + update(News new)
+}
+
+'Observer'
+class Member
+
+interface TopicListener{
+    + void updateListen(News n)
+    + void insertListen(News n)
+}
+
+TopicListener <|.. Member
+Topic o--> TopicListener : listeners
+
+Member --> Topic : topic
+Member <|-- MemberA
+Member <|-- MemberB
+
+MemberB *--> News : news
+@enduml

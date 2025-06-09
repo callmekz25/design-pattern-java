@@ -1,0 +1,18 @@
+@startuml
+
+class GiaiTam
+
+class GiaiConLai
+
+abstract class GiaiVeSo{
+   - String tenGiai
+   - List<String> soTrungThuong
+   + GiaiVeSo giaiKeTiep(GiaiVeSo keTiep)
+   + String doVeSo(String veSo)
+}
+
+GiaiTam --|> GiaiVeSo
+GiaiConLai --|> GiaiVeSo
+GiaiConLai --> GiaiVeSo : keTiep
+
+@enduml

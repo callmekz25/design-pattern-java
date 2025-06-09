@@ -29,6 +29,8 @@ public class DichVuTiGia implements ThayDoiTiGia {
 
     @Override
     public void nhanThongBao(float delta) {
-
+        for (var ndt: nhaDauTu) {
+            ndt.nhanThongBao(delta);
+        }
     }
 }
