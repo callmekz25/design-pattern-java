@@ -2,7 +2,7 @@ package structure.decorator.beverage;
 
 public class MainBeverage {
     public static void main(String[] args) {
-        Beverage b = new Expresso("Cafe Expresso");
+        Beverage b = new Espresso("Cafe Espresso");
         b = new Milk("Ha Lan Milk", b);
         System.out.println(b.getDescription());
         System.out.println(b.cost());
